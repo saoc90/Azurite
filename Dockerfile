@@ -3,7 +3,7 @@ FROM stefanscherer/node-windows:10
 WORKDIR /opt/azurite
 
 # Default Workspace Volume
-VOLUME [ "C:/data" ]
+#VOLUME [ "C:/data" ]
 
 COPY . .
 
@@ -18,4 +18,4 @@ EXPOSE 10000
 # Queue Storage Port
 EXPOSE 10001
 
-CMD ["azurite", "-l", "C:/data", "--blobHost", "0.0.0.0","--queueHost", "0.0.0.0"]
+CMD ["node", "C:\nodejs\node_modules\azurite\dist\src\azurite.js", "--blobHost", "0.0.0.0", "-L"]
