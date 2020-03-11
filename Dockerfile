@@ -1,4 +1,4 @@
-FROM node:10
+FROM stefanscherer/node-windows:10
 
 WORKDIR /opt/azurite
 
