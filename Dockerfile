@@ -3,7 +3,7 @@ FROM stefanscherer/node-windows:10
 WORKDIR /opt/azurite
 
 # Default Workspace Volume
-VOLUME [ "/data" ]
+VOLUME [ "C:/data" ]
 
 COPY . .
 
